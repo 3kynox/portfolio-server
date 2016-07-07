@@ -1,0 +1,35 @@
+ContactBundle\Entity\Contact:
+    type: mappedSuperclass
+
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+
+        surname:
+            type: string
+            length: 255
+
+        birthDate:
+            type: date
+
+    manyToMany:
+        commWay:
+            targetEntity: CommunicationWay
+            joinTable:
+                name: contact_commway
+                joinColumns:
+                    contact_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    contact_id:
+                        referencedColumnName: id
+            cascade: [ persist, merge, detach ]
+
+    lifecycleCallbacks: {  }
