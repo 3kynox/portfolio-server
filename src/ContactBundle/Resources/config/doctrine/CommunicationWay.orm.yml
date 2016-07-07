@@ -1,0 +1,20 @@
+ContactBundle\Entity\CommunicationWay:
+    type: entity
+
+    inheritanceType: JOINED
+    discriminatorColumn:
+        name: type
+        type: integer
+    discriminatorMap:
+        1: Telephone
+        2: Email
+        3: Adress
+
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+    lifecycleCallbacks: {  }
