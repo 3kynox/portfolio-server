@@ -1,0 +1,9 @@
+ContactBundle\Entity\Email:
+    type: entity
+
+    fields:
+        email:
+            type: string
+            length: 255
+
+    lifecycleCallbacks: {  }

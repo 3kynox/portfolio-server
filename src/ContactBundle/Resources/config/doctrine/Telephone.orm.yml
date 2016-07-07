@@ -1,0 +1,8 @@
+ContactBundle\Entity\Telephone:
+    type: entity
+
+    fields:
+        number:
+            type: integer
+
+    lifecycleCallbacks: {  }

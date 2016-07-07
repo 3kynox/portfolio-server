@@ -1,0 +1,15 @@
+ContactBundle\Entity\Adress:
+    type: entity
+
+    fields:
+        adress:
+            type: string
+            length: 255
+        postalCode:
+            type: string
+            length: 255
+        city:
+            type: string
+            length: 255
+
+    lifecycleCallbacks: {  }
