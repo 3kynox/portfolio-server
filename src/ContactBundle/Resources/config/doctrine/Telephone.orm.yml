@@ -3,6 +3,7 @@ ContactBundle\Entity\Telephone:
 
     fields:
         number:
-            type: integer
+            type: string
+            length: 255
 
     lifecycleCallbacks: {  }
