@@ -1,0 +1,15 @@
+ContactBundle\Entity\Company:
+    type: entity
+
+    associationOverride:
+        commWay:
+            joinTable:
+                name: company_commway
+                joinColumns:
+                    company_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    commWay_id:
+                        referencedColumnName: id
+
+    lifecycleCallbacks: {  }
