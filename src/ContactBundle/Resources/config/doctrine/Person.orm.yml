@@ -12,4 +12,12 @@ ContactBundle\Entity\Person:
                     commWay_id:
                         referencedColumnName: id
 
+    fields:
+        surname:
+            type: string
+            length: 255
+
+        birthDate:
+            type: date
+
     lifecycleCallbacks: {  }
