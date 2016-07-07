@@ -13,3 +13,6 @@
 ### Composer ###
 /composer.phar
 /vendor/
+
+### PHP-Storm ###
+/.idea
