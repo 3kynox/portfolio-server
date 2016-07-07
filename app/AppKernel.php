@@ -27,7 +27,7 @@ class AppKernel extends Kernel
 //            new Nelmio\CorsBundle\NelmioCorsBundle(),
 //            new FOS\HttpCacheBundle\FOSHttpCacheBundle(),
 
-            new AppBundle\AppBundle(),
+            new ContactBundle\ContactBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
