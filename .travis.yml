@@ -1,0 +1,14 @@
+language: php
+
+matrix:
+  include:
+    - php: 5.5
+
+before_install:
+  - composer selfupdate
+
+install:
+  - composer update
+
+script:
+  - phpunit -c app

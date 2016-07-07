@@ -1,0 +1,15 @@
+### Symfony ###
+/app/cache/*
+/app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+/app/config/parameters.yml
+/app/bootstrap.php.cache
+/bin/*
+/app/phpunit.xml
+/build/
+/web/bundles/
+
+### Composer ###
+/composer.phar
+/vendor/
