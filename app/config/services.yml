@@ -7,3 +7,43 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+
+    resource.person:
+        parent:    "api.resource"
+        arguments: [ "ContactBundle\\Entity\\Person" ]
+        calls:
+            - method:     "initNormalizationContext"
+              arguments:  [{ groups: [ "contacts" ] }]
+            - method:    "initDenormalizationContext"
+              arguments:  [{ groups: [ "contacts" ] }]
+        tags:      [ { name: "api.resource" } ]
+
+    resource.company:
+        parent:    "api.resource"
+        arguments: [ "ContactBundle\\Entity\\Company" ]
+        calls:
+            - method:     "initNormalizationContext"
+              arguments:  [{ groups: [ "contacts" ] }]
+            - method:    "initDenormalizationContext"
+              arguments:  [{ groups: [ "contacts" ] }]
+        tags:      [ { name: "api.resource" } ]
+
+    resource.communicationway:
+        parent:    "api.resource"
+        arguments: [ "ContactBundle\\Entity\\CommunicationWay" ]
+        tags:      [ { name: "api.resource" } ]
+
+    resource.telephone:
+        parent:    "api.resource"
+        arguments: [ "ContactBundle\\Entity\\Telephone" ]
+        tags:      [ { name: "api.resource" } ]
+
+    resource.email:
+        parent:    "api.resource"
+        arguments: [ "ContactBundle\\Entity\\Email" ]
+        tags:      [ { name: "api.resource" } ]
+
+    resource.adress:
+        parent:    "api.resource"
+        arguments: [ "ContactBundle\\Entity\\Adress" ]
+        tags:      [ { name: "api.resource" } ]

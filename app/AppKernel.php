@@ -24,7 +24,7 @@ class AppKernel extends Kernel
 //            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 //            new Symfony\Bundle\TwigBundle\TwigBundle(),
 //            new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
-//            new Nelmio\CorsBundle\NelmioCorsBundle(),
+            new Nelmio\CorsBundle\NelmioCorsBundle(),
 //            new FOS\HttpCacheBundle\FOSHttpCacheBundle(),
 
             new ContactBundle\ContactBundle(),
